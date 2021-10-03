@@ -1,0 +1,168 @@
+
+version: "2.0"
+stories:
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: Mumbai
+  - slot_was_set:
+    - location: Mumbai
+  - action: action_search_loc
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_price
+  - intent: restaurant_search
+    entities:
+    - price: Low
+  - slot_was_set:
+    - price: Low
+  - action: action_search_restaurants
+  - action: utter_ask_email
+  - intent: email_export
+    entities:
+    - mail_id: abc@gmail.com
+  - slot_was_set:
+    - mail_id: abc@gmail.com
+  - action: action_send_mail
+  - intent: goodbye
+  - action: utter_goodbye
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - location: Mumbai
+  - slot_was_set:
+    - location: Mumbai
+  - action: action_search_loc
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: Italian
+  - slot_was_set:
+    - cuisine: Italian
+  - action: utter_ask_price
+  - intent: restaurant_search
+    entities:
+    - price: Mid
+  - slot_was_set:
+    - price: Mid
+  - action: action_search_restaurants
+  - action: utter_ask_email
+  - intent: email_export
+    entities:
+    - mail_id: abc@gmail.com
+  - slot_was_set:
+    - mail_id: abc@gmail.com
+  - action: action_send_mail
+  - slot_was_set:
+    - mail_id: abc@gmail.com
+  - intent: goodbye
+  - action: utter_goodbye
+- story: interactive_story_3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: Gurgaon
+  - slot_was_set:
+    - location: Gurgaon
+  - action: action_search_loc
+  - action: utter_ask_price
+  - intent: restaurant_search
+    entities:
+    - price: High
+  - slot_was_set:
+    - price: High
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: Gurgaon
+  - action: utter_ask_email
+  - intent: email_export
+    entities:
+    - mail_id: chetan.wanave07@gmail.com
+  - slot_was_set:
+    - mail_id: chetan.wanave07@gmail.com
+  - action: action_send_mail
+  - slot_was_set:
+    - mail_id: chetan.wanave07@gmail.com
+  - intent: goodbye
+  - action: utter_goodbye
+- story: interactive_story_4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: Italian
+    - location: Mumbai
+  - slot_was_set:
+    - cuisine: Italian
+  - slot_was_set:
+    - location: Mumbai
+  - action: action_search_loc
+  - action: utter_ask_price
+  - intent: restaurant_search
+    entities:
+    - price: High
+  - slot_was_set:
+    - price: High
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: Mumbai
+  - action: utter_ask_email
+  - intent: email_export
+    entities:
+    - mail_id: chetan.wanave07@gmail.com
+  - slot_was_set:
+    - mail_id: chetan.wanave07@gmail.com
+  - action: action_send_mail
+  - slot_was_set:
+    - mail_id: chetan.wanave07@gmail.com
+  - intent: goodbye
+  - action: utter_goodbye
+- story: interactive_story_5
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: Italian
+    - price: Mid
+    - location: Mumbai
+  - slot_was_set:
+    - cuisine: Italian
+  - slot_was_set:
+    - location: Mumbai
+  - slot_was_set:
+    - price: Mid
+  - action: action_search_loc
+  - action: action_search_restaurants
+  - action: utter_ask_email
+  - intent: email_export
+    entities:
+    - mail_id: chetan.wanave07@gmail.com
+  - slot_was_set:
+    - mail_id: chetan.wanave07@gmail.com
+  - action: action_send_mail
+  - slot_was_set:
+    - mail_id: chetan.wanave07@gmail.com
+  - intent: goodbye
+  - action: utter_goodbye
